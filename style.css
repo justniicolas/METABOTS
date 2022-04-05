@@ -22,6 +22,7 @@ html {
 }
 
 
+
 .container {
     width: 100%;
     max-width: 1240px;
@@ -220,10 +221,16 @@ a .btn {
 /* Accueil */
 .hero {
     height: 100vh;
+    width: 233vh;
     display: flex;
     align-items: center;
 }
+.logo_t{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 
+}
 .hero .heroD, .hero .heroG {
     width: 50%;
     height: 100%;
@@ -478,6 +485,9 @@ a .btn2 {
         width: 100%;
     }
     .nav {
+      display: none;
+    }
+    .logo_t{
       display: none;
     }
 }
