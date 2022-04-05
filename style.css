@@ -5,11 +5,11 @@
 }
 
 :root {
-    --color1: #000000;
-    --color2: #ffffff;
-    --color3: #d02561;
-    --color4: #04091a;
-    --color5: #707070;
+    --color1: #3431Fb;
+    --color2: #2623B5;
+    --color3: #181977;
+    --color4: #bfbfbf;
+    --color5: #ededf5;
 }
 
 body {
@@ -20,6 +20,7 @@ body {
 html {
     font-size: 16px;
 }
+
 
 .container {
     width: 100%;
@@ -45,7 +46,7 @@ html {
     /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
    /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
     /* clip-path: circle(25px at calc(0% + 45px) 45px); */
-    background: var(--color1);
+    background: var(--color3);
     clip-path: circle(25px at calc(100% - 1073px) 40px);
     transition: all 0.3s ease-in-out;
     
@@ -67,8 +68,8 @@ html {
     line-height: 50px;
     border-radius: 50%;
     font-size: 20px;
-    color: var(--color3);
-    cursor: pointer;
+    color: var(--color);
+    cursor: url('http://assets.stickpng.com/thumbs/58afdad6829958a978a4a693.png'), auto;	
     /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
     /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
    /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
@@ -76,13 +77,22 @@ html {
     transition: all 0.3s ease-in-out;
     }
     .menu-btn:hover{
-    color: var(--color2);
+    
+    color: var(--color4);
     
     
   }
   #active:checked ~ .menu-btn{
-    color: #fff;
+    color:var(--color1);
+    transition: all 0.3s;
   }
+
+  #active:checked ~ .menu-btn :hover{
+    opacity: 0.9;
+    color: rgb(223, 0, 0);
+    transition : all 0.3s; 
+  }
+
   #active:checked ~ .menu-btn i:before{
     content: "\f00d";
   }
@@ -113,17 +123,17 @@ html {
   .wrapper ul li a:after{
     position: absolute;
     content: "";
-    background: #fff;
-     background: var(--color3);
+    background: rgb(255, 255, 255);
+     background: var(--color5);
     /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
     width: 110%;
     height: 110%;
     left: -4%;
-    top: -5%; /* if the font is 'Oswald'*/
+    top: -5%; 
     border-radius: 50px;
     transform: scaleY(0);
     z-index: -1;
-    animation: rotate 1.5s linear infinite;
+    /*animation: rotate 1.5s linear infinite;*/
     transition: transform 0.3s ease;
   }
   .wrapper ul li a:hover:after{
@@ -131,7 +141,7 @@ html {
   }
   .wrapper ul li a:hover{
     opacity: 0.9;
-    color: #fff;
+    color: rgb(255, 255, 255);
   }
   input[type="checkbox"]{
     display: none;
@@ -167,14 +177,14 @@ html {
 .btn {
     border: 0;
     padding: .5rem 1rem;
-    background: var(--color3);
+    background: var(--color5);
     cursor: pointer;
     transition: all .5s;
 }
 
 .btn:hover {
-    background: var(--color2);
-    color: var(--color3);
+    background: var(--color3);
+    color: var(--color5);
 }
 
 a .btn {
@@ -182,10 +192,21 @@ a .btn {
 }
 
 .red {
-    color: var(--color3);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    color: var(--color5);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.discord_blue {
+  color: #000000;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  -webkit-transition: color 2s;
+  transition: color 2s;
+  
+  }
+  .discord_blue :hover{
+    color: var(--color2);
+  }
 .loading {
     width: 100%;
     height: 100vh;
@@ -215,8 +236,8 @@ a .btn {
 }
 
 .hero .heroG {
-    background: var(--color1);
-    color: var(--color2);
+    background: var(--color3);
+    color: var(--color4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,7 +261,7 @@ a .btn {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    color: var(--color2);
+    color: var(--color5);
     font-size: 2rem;
     font-weight: 700;
 }
@@ -258,7 +279,7 @@ a .btn {
 
 .hero .socials ul li {
     margin-left: 1rem;
-    background: var(--color1);
+    background: var(--color2);
     width: 30px;
     height: 30px;
     display: flex;
@@ -269,12 +290,12 @@ a .btn {
 }
 
 .hero .socials ul li a {
-    color: var(--color3);
+    color: var(--color5);
     transition: color .5s;
 }
 
 .hero .socials ul li a:hover {
-    color: var(--color2);
+    color: var(--color4);
 }
 
 .hero .socials ul {
@@ -283,7 +304,7 @@ a .btn {
 
 /* Discord */
 .discord {
-    background: var(--color2);
+    background: var(--color5);
     padding: 4rem 0;
     text-align: center;
 }
@@ -293,11 +314,30 @@ a .btn {
     font-size: 2rem;
 }
 
+.btn2 {
+  border-radius: 0.25rem;
+  
+  padding: .5rem 1rem;
+  background: var(--color5);
+  cursor: pointer;
+  transition: all .5s;
+
+}
+
+.btn2:hover {
+  background: var(--color3);
+  color: var(--color5);
+}
+
+a .btn2 {
+  color: var(--color2);
+}
+
 /* RoadMap */
 .roadmap {
-    background: var(--color1);
+    background: var(--color3);
     padding: 4rem 0;
-    color: var(--color2);
+    color: var(--color4);
 }
 
 .roadmap h2 {
@@ -307,7 +347,7 @@ a .btn {
 }
 
 .roadmap .bloc {
-    background: var(--color4);
+    background: var(--color5);
     margin-bottom: 3rem;
     padding: 1rem;
     position: relative;
@@ -326,7 +366,7 @@ a .btn {
     position: absolute;
     top: -1rem;
     left: calc(1rem - 1px);
-    background: var(--color3);
+    background: #363334;
     padding: 1rem;
     border-radius: 50%;
     width: 2rem;
@@ -337,8 +377,8 @@ a .btn {
 }
 
 .roadmap .number.off {
-    background: var(--color2);
-    color: var(--color3);
+    background: var(--color4);
+    color: var(--color5);
 }
 
 .roadmap .container {
@@ -357,6 +397,7 @@ a .btn {
 /* Team */
 .team {
     padding: 4rem 0;
+    background-color:var(--color5);
 }
 
 .team h2 {
@@ -390,7 +431,7 @@ a .btn {
 }
 
 .team .member .job {
-    color: var(--color5);
+    color: var(--color1);
     font-size: 1rem;
     font-weight: 300;
     text-transform: uppercase;
@@ -444,8 +485,8 @@ a .btn {
 /* Footer */
 .footer-dark {
     padding:50px 0;
-    color:#f0f9ff;
-    background-color:var(--color1);
+    color:var(--color5);
+    background-color:#363334;
   }
   
   .footer-dark h3 {
@@ -518,9 +559,8 @@ a .btn {
     border-radius:50%;
     box-shadow:0 0 0 1px rgba(0, 0, 0, 0.4);
     margin:0 8px;
-    color:#fff;
     opacity:0.75;
-    color: var(--color3);
+    color: var(--color4);
     transition: color .5s;
   }
   

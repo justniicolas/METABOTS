@@ -1,15 +1,14 @@
 let tl = gsap.timeline();
 
 tl.to('.loading', {
-    left: '100%',
+    left: '200%',
     duration: 0.75
 })
-tl.from('.nav', {
-    opacity: 0,
-    duration: 0.5
+tl.from('header', {
+    duration: 0.5,
+    filter: "blur(5px)"
 
 })
-
 tl.from('.hero', {
     duration: 0.5,
     filter: "blur(5px)"
@@ -25,21 +24,16 @@ tl.from('.socials', {
     duration: 0.2
 })
 
-tl.from('.heroG h1', {
-    opacity: 0,
-    duration: 0.2
-})
-
-tl.from('.heroG p', {
-    opacity: 0,
-    duration: 0.2
-})
-
-tl.from('.heroG .btn', {
-    opacity: 0,
-    duration: 0.2
-})
-
 tl.to('.loading', {
     display: 'none'
+})
+tl.from('.cards', {
+    duration: 0.5,
+    filter: "blur(px)"
+})
+
+tl.from('.menu-btn', {
+    opacity: 0.5,
+    duration: 1
+
 })
