@@ -60,7 +60,7 @@ html {
   .menu-btn{
     position: absolute;
     z-index: 2;
-    left: 165px;
+    left: 100px;
     /* left: 20px; */
     top: 15px;
     height: 50px;
@@ -69,12 +69,12 @@ html {
     line-height: 50px;
     border-radius: 50%;
     font-size: 20px;
-    color: var(--color);
-    cursor: url('http://assets.stickpng.com/thumbs/58afdad6829958a978a4a693.png'), auto;	
+    color: var(--color3);
+    cursor: pointer;
     /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
     /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
    /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
-    background: #000;
+    background: rgb(240, 240, 240);
     transition: all 0.3s ease-in-out;
     }
     .menu-btn:hover{
@@ -90,7 +90,7 @@ html {
 
   #active:checked ~ .menu-btn :hover{
     opacity: 0.9;
-    color: rgb(223, 0, 0);
+    color: var(--color4);
     transition : all 0.3s; 
   }
 
@@ -114,9 +114,9 @@ html {
     font-size: 30px;
     font-weight: 500;
     padding: 5px 30px;
-    color: #fff;
+    color: var(--color2);
     border-radius: 50px;
-    background: #000;
+    background: var(--color5);
     position: relative;
     line-height: 50px;
     transition: all 0.3s ease;
@@ -211,7 +211,7 @@ a .btn {
 .loading {
     width: 100%;
     height: 100vh;
-    background: var(--color1);
+    background: var(--color2);
     position: absolute;
     top: 0;
     left: 0;
@@ -225,12 +225,14 @@ a .btn {
     display: flex;
     align-items: center;
 }
+
+
 .logo_t{
   position: absolute;
   top: 1rem;
   left: 1rem;
-
-}
+  
+   }
 .hero .heroD, .hero .heroG {
     width: 50%;
     height: 100%;
@@ -463,6 +465,7 @@ a .btn2 {
     .hero .heroD, .hero .heroG {
         width: 100%;
         height: 100%;
+        left: 10px;
     }
 
     .hero .heroG div h1 {
@@ -487,7 +490,7 @@ a .btn2 {
     .nav {
       display: none;
     }
-    .logo_t{
+    .intro {
       display: none;
     }
 }
